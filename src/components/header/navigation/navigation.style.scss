@@ -1,0 +1,44 @@
+.mobile-navigation-menu-open {
+    display: none;
+}
+.navigation-menu.web {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    .mobile-navigation-menu-close {
+        display: none;
+    }
+}
+
+@media (max-width: 636px) {
+    .mobile-navigation-menu-open {
+        display: flex;
+    }
+    .navigation-menu.web {
+        display: none;
+    }
+    .navigation-menu.mobile {
+        height: 100vh;
+        width: 100vw;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: #44444c;
+        .mobile-navigation-menu-close {
+            display: flex;
+            width: 2rem;
+            height: 2rem;
+        }
+        .navigation-menu-item {
+            :first-child {
+                color: white;
+            }
+        }
+    }
+}

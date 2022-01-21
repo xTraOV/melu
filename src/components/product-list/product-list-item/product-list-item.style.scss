@@ -1,0 +1,23 @@
+.product-list-item {
+    .product-list-item-wrapper-link {
+        background-color: #f7f7f7;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .product-list-item-header {
+            height: 30%;
+            h1 {
+                font-weight: 400;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 636px) {
+    .product-list-item {
+        .product-list-item-wrapper-link {
+        }
+    }
+}
