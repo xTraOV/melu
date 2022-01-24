@@ -5,7 +5,7 @@
     grid-gap: 0.5rem;
 }
 
-@media (max-width: 636px) {
+@media (max-width: 700px) {
     .products-wrapper {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(10, 1fr);

@@ -10,6 +10,7 @@ import ProductListPageMen from "./pages/product-list-men.page";
 import "./melu.style.scss";
 import ProductListPageWomen from "./pages/product-list-women.page";
 import HomePage from "./pages/home.page";
+import AuthPage from "./pages/authentication.page";
 
 const Melu = () => {
     return (
@@ -32,6 +33,10 @@ const Melu = () => {
                     path='/products/women'
                     component={ProductListPageWomen}
                 />
+                <Route 
+                    exact 
+                    path='/authentication'
+                component={AuthPage}/>
             </Switch>
         </div>
     );
