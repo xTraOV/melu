@@ -16,28 +16,27 @@ const Melu = () => {
     return (
         <div>
             <Header />
-            <Switch>
-                <Route exact path='/' component={HomePage} />
-                <Route
-                    exact
-                    path='/products/all'
-                    component={ProductListPageAll}
-                />
-                <Route
-                    exact
-                    path='/products/men'
-                    component={ProductListPageMen}
-                />
-                <Route
-                    exact
-                    path='/products/women'
-                    component={ProductListPageWomen}
-                />
-                <Route 
-                    exact 
-                    path='/authentication'
-                component={AuthPage}/>
-            </Switch>
+            <div className='melu-content'>
+                <Switch>
+                    <Route exact path='/' component={HomePage} />
+                    <Route
+                        exact
+                        path='/products/all'
+                        component={ProductListPageAll}
+                    />
+                    <Route
+                        exact
+                        path='/products/men'
+                        component={ProductListPageMen}
+                    />
+                    <Route
+                        exact
+                        path='/products/women'
+                        component={ProductListPageWomen}
+                    />
+                    <Route exact path='/authentication' component={AuthPage} />
+                </Switch>
+            </div>
         </div>
     );
 };

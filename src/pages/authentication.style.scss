@@ -1,0 +1,32 @@
+@import "../defaults";
+
+.authForm {
+    width: clamp(260px, 30vw, 768px);
+    aspect-ratio: 1/1;
+    .authHeader {
+        display: flex;
+        gap: 1rem;
+        button {
+            width: 50%;
+            height: 3rem;
+            background-color: $default-color-red;
+            border: none;
+            border-radius: $default-border-radius;
+            span {
+                font-weight: $default-font-weight-heavy;
+                font-size: clamp(0.8rem, 1.92vw, 1.5rem);
+            }
+        }
+        .authHeaderLogIn.active {
+            box-shadow: $default-box-shadow;
+        }
+        .authHeaderRegistration.active {
+            box-shadow: $default-box-shadow;
+        }
+        .active {
+            background-color: $default-color-yellow;
+            border-bottom: none;
+            transform: scale(103%);
+        }
+    }
+}

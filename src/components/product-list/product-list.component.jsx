@@ -10,10 +10,14 @@ const ProductList = ({ pageCategory }) => {
     const [products, setProducts] = useState(null);
 
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
+        const abortCont = new AbortController();
+        fetch("https://fakestoreapi.com/products", {
+            signal: abortCont.signal,
+        })
             .then((res) => res.json())
             .then((data) => setProducts(data))
             .catch((error) => console.log(error));
+        return () => abortCont.abort();
     }, []);
 
     return (
