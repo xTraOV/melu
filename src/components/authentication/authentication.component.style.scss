@@ -15,9 +15,22 @@
         padding: 0;
         border: none;
     }
+    .sign-in-button,
+    .submit {
+        width: 70%;
+        height: 2rem;
+        background-color: $default-color-green;
+        border-radius: $default-border-radius;
+        box-shadow: 0.2px -0.2px 12px 0px;
+        span {
+            font-weight: $default-font-weight-heavy;
+            font-size: 1.1rem;
+        }
+    }
     img {
         width: 12rem;
         height: 100%;
+        box-shadow: 0.2px -0.2px 12px 0px;
     }
     .facebook-sign-in {
         margin-bottom: 1rem;
@@ -41,5 +54,7 @@
         }
     }
 }
-.signin {
+.clicked {
+    scale: 98%;
+    box-shadow: none;
 }

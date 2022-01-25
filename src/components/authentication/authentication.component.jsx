@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./authentication.component.style.scss";
 import GoogleLogo from "../../images/btn_google_signin_dark_normal_web.png";
 import FacebookLogo from "../../images/oL5c2.png";
 
 const AuthInputSignIn = () => {
+    const [buttonClick, setButtonclick] = useState(undefined);
+    const handleButtonClick = () => {
+        setButtonclick(true);
+        setTimeout(() => {
+            setButtonclick(undefined);
+        }, 300);
+    };
     return (
         <>
             <div className='input-container signin'>
@@ -15,11 +22,16 @@ const AuthInputSignIn = () => {
                         placeholder='პაროლი'
                     />
                 </form>
+                <button type='submit' className='submit sign-in-button'>
+                    <span>შესვლა</span>
+                </button>
                 <button
                     onClick={() => {
                         console.log("google sign in");
                     }}
-                    className='google-sign-in'>
+                    className={`google-sign-in ${
+                        buttonClick ? "clicked" : undefined
+                    }`}>
                     <img src={GoogleLogo} alt='google sign in' />
                 </button>
                 <button
@@ -56,6 +68,9 @@ const AuthInputRegistration = () => {
                         placeholder='გაიმეორე პაროლი'
                     />
                 </form>
+                <button type='submit' className='submit registration-button'>
+                    <span>რეგისტრაცია</span>
+                </button>
                 <button
                     onClick={() => {
                         console.log("google sign in");
